@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController _playerCtrl;
     Camera _cam;
-    [SerializeField] private float walkSpeed, runSpeed, rotateSpeed, jumpForce;
+    [SerializeField] private float walkSpeed, runSpeed, jumpForce;
     [SerializeField] private float gravity;
     [SerializeField] private float speed;
 
@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     private void Update() {
 
         Move();
-        // Rotate();
-        // Jump();
     }
 
     private void Move() {
@@ -42,15 +40,6 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(x, -gravity, z);
         dir = transform.rotation * dir;
         _playerCtrl.Move(dir * speed * Time.deltaTime);
-    }
-
-    private void Rotate() {
-
-        float x = Input.GetAxis("Mouse X");
-        float y = Input.GetAxis("Mouse Y");
-
-        transform.Rotate(0, x, 0);
-        _cam.transform.Rotate(-y, 0, 0);
     }
 
     // private void Jump() {
