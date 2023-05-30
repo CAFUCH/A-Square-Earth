@@ -55,9 +55,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit)) {
-
-            Debug.Log(hit.point);
-
+            
             Vector3 target = hit.point;
 
             Vector3 dir = target - transform.position;
