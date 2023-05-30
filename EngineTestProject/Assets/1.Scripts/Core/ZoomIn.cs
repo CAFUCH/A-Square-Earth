@@ -7,7 +7,6 @@ using DG.Tweening;
 public class ZoomIn : MonoBehaviour
 {
     [SerializeField] private Camera _cam;
-    [SerializeField] private GameObject _map;
     [SerializeField] private Ease ease;
 
     [SerializeField] float minZoom ,maxZoom;
@@ -35,16 +34,16 @@ public class ZoomIn : MonoBehaviour
                 DOVirtual.Float(minZoom, maxZoom, 1f, value => {
                     _cam.fieldOfView = value; }).SetEase(ease);
 
-                if (_map.transform.position.y >= maxHeight)
-                    _map.transform.DOMoveY(maxHeight, 1f).SetEase(ease);
+                if (_cam.transform.position.y <= maxHeight)
+                    _cam.transform.DOMoveY(maxHeight, 1f).SetEase(ease);
             }
             else {
 
                 DOVirtual.Float(maxZoom, minZoom, 1f, value => {
                     _cam.fieldOfView = value; }).SetEase(ease);
 
-                if (_map.transform.position.y <= maxHeight)
-                    _map.transform.DOMoveY(minHeight, 1f).SetEase(ease);
+                if (_cam.transform.position.y >= minHeight)
+                    _cam.transform.DOMoveY(minHeight, 1f).SetEase(ease);
             }
         }
 

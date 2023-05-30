@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Bar" style="left: auto; right: auto; width: 25%; height: 100%; justify-content: flex-start; align-items: flex-start; flex-direction: row;">
+        <ui:IMGUIContainer style="width: 25%; height: 115px; position: relative; left: 15%; right: 30px; top: 5%; align-items: center;">
+            <ui:ProgressBar title="my-progress" style="height: 800px; width: 75%; flex-direction: column; align-items: center; justify-content: space-between; left: auto; top: 125%;" />
+        </ui:IMGUIContainer>
+        <ui:IMGUIContainer style="width: 25%; height: 115px; position: relative; left: 35%; right: 30px; top: 5%;" />
+    </ui:VisualElement>
+</ui:UXML>
