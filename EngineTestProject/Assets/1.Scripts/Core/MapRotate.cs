@@ -14,6 +14,8 @@ public class MapRotate : MonoBehaviour
 
     Vector3 originPos;
 
+    bool isChg = false;
+
     private void Start() {
         
         originPos = _map.transform.position;
@@ -45,30 +47,20 @@ public class MapRotate : MonoBehaviour
 
     public void LeftMap() {
 
-        leftCount++;
-        rot = Quaternion.Euler(0, 0, -90f);
-        _map.transform.rotation *= rot;
+        Quaternion rot = Quaternion.Euler(0, 0, -90f);
+            _map.transform.rotation = rot * _map.transform.rotation;
 
-        // dir = leftDir[leftCount % leftDir.Length];
-        // _map.transform.position += dir;
-        dir = leftDir[leftCount % leftDir.Length];
-        // Vector3 targetPos = _map.transform.position + dir;
-        Vector3 targetPos = originPos + dir;
-        StartCoroutine(ResetPos(targetPos));
-        
+        leftCount++;
     }
 
     public void RightMap() {
 
+        Quaternion rot = Quaternion.Euler(90f, 0, 0);
+            _map.transform.rotation = rot * _map.transform.rotation;
+
         rightCount++;
-        rot = Quaternion.Euler(90f, 0, 0);
-        _map.transform.rotation *= rot;
 
-        dir = rightDir[rightCount % rightDir.Length];
-        // Vector3 targetPos = _map.transform.position + dir;
-        Vector3 targetPos = originPos + dir;
-        StartCoroutine(ResetPos(targetPos));
-
+        // _map.transform.rotation = new 
     }
     
     IEnumerator ResetPos(Vector3 targetPos) {
