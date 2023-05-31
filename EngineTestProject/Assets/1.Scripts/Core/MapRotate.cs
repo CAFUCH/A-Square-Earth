@@ -12,6 +12,13 @@ public class MapRotate : MonoBehaviour
     Quaternion rot;
     Vector3 dir;
 
+    Vector3 originPos;
+
+    private void Start() {
+        
+        originPos = _map.transform.position;
+    }
+
     private Vector3[] leftDir = new Vector3[] {
 
         new Vector3(15f, -15f, 0f),
@@ -38,23 +45,46 @@ public class MapRotate : MonoBehaviour
 
     public void LeftMap() {
 
+        leftCount++;
         rot = Quaternion.Euler(0, 0, -90f);
         _map.transform.rotation *= rot;
 
+        // dir = leftDir[leftCount % leftDir.Length];
+        // _map.transform.position += dir;
         dir = leftDir[leftCount % leftDir.Length];
-        _map.transform.position += dir;
-
-        leftCount++;
+        // Vector3 targetPos = _map.transform.position + dir;
+        Vector3 targetPos = originPos + dir;
+        StartCoroutine(ResetPos(targetPos));
+        
     }
 
     public void RightMap() {
 
+        rightCount++;
         rot = Quaternion.Euler(90f, 0, 0);
         _map.transform.rotation *= rot;
 
         dir = rightDir[rightCount % rightDir.Length];
-        _map.transform.position += dir;
+        // Vector3 targetPos = _map.transform.position + dir;
+        Vector3 targetPos = originPos + dir;
+        StartCoroutine(ResetPos(targetPos));
 
-        rightCount++;
+    }
+    
+    IEnumerator ResetPos(Vector3 targetPos) {
+
+        Vector3 startPos = _map.transform.position;
+
+        float t = 0f;
+
+        while (t < 0.25f) {
+
+            t += Time.deltaTime * 1.0f;
+
+            _map.transform.position = Vector3.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
+
+        _map.transform.position = targetPos;
     }
 }

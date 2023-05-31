@@ -6,3 +6,4 @@ public abstract class AIDecision : MonoBehaviour
 {
     public abstract bool MakeDecition(); // 변경할지를 결정하는 함수
 }
+    
