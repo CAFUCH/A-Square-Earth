@@ -10,6 +10,7 @@ public class IdleAction : AIAction
     }
     public override void TakeAction() {
 
-        aiBrain.SetDestinationF(aiBrain.target.position, 0f);
+        // aiBrain.SetDestinationF(aiBrain.target.position, 0f);
+        Debug.Log("에잇 공격");
     }
 }

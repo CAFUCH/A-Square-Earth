@@ -17,10 +17,11 @@ public class PlayerMove : MonoBehaviour
 
     private void Update() {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
-
+        if (Input.GetKeyDown(KeyCode.Mouse0))
             Move();
-        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+            Attack();
     }
     
     private void Move() {
@@ -33,5 +34,13 @@ public class PlayerMove : MonoBehaviour
 
         _agent.speed = speed;
         _agent.SetDestination(pos);
+    }
+
+    private void Attack() {
+
+        //우클릭으로 받았어
+        // 1. 우클릭 한 상대가 엔티티 인가?
+        // 2. 엔티티라면 따라가고 일정 거리로 들어오면 액션하기
+        // _agent.SetDestination()
     }
 }

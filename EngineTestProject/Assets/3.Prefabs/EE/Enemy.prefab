@@ -188,8 +188,9 @@ GameObject:
   - component: {fileID: 6878721639287046223}
   - component: {fileID: 6878721639287048112}
   - component: {fileID: 6878721639287048113}
-  - component: {fileID: 6878721639287048114}
   - component: {fileID: 6878721639287048115}
+  - component: {fileID: 2726547625217837218}
+  - component: {fileID: 6878721639287048114}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -279,25 +280,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6878721639287048114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6878721639287048116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f340a486e29d64b935d339a3713a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _navAgent: {fileID: 0}
-  curAIState: {fileID: 0}
-  states:
-  - {fileID: 6878721638254440663}
-  - {fileID: 6878721639268588925}
-  - {fileID: 6878721640147394462}
-  target: {fileID: 0}
 --- !u!195 &6878721639287048115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -320,6 +302,42 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2726547625217837218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878721639287048116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92c0cdeee7eaba49b11ccf6b7a6cb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 20
+  walkSpeed: 3
+  runSpeed: 5
+  damage: 3
+  attactDelay: 1
+--- !u!114 &6878721639287048114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878721639287048116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f340a486e29d64b935d339a3713a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curAIState: {fileID: 0}
+  states:
+  - {fileID: 6878721638254440663}
+  - {fileID: 6878721639268588925}
+  - {fileID: 6878721640147394462}
+  target: {fileID: 0}
 --- !u!1 &6878721640147394463
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AIBrain : MonoBehaviour
 {
-    [SerializeField] NavMeshAgent _navAgent;
+    NavMeshAgent _navAgent;
 
     [SerializeField] private AIState curAIState; // 현재 상태를 받을 변수
     [SerializeField] private List<AIState> states; // 변경 가능한 상태 리스트
