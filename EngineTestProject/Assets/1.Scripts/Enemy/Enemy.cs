@@ -6,15 +6,20 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    private void Awake() {
-        
-        hp = maxHp;
-    }
+    bool isDie = false;
+
     private void OnCollisionEnter(Collision other) {
         
         if (other.gameObject.CompareTag("Player")) {
 
             Core.instance.OnDamage(hp, damage);
         }
+    }
+
+    protected override void OnDie() {
+        
+        isDie = true;
+
+        Destroy(gameObject);
     }
 }
