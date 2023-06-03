@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
         Move();
         Rotate();
+        Attack();
     }
     private void Move() {
 
@@ -106,13 +107,15 @@ public class PlayerController : MonoBehaviour
     //     // }
     // }
 
-    private void Fire() {
+    private void Attack() {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            Debug.Log("총알 발사");
+        RaycastHit hit;
 
-            // Instantiate()
+        if (Physics.Raycast(ray, out hit)) {
+
+            Debug.Log(hit.collider.name);
         }
     }
 }

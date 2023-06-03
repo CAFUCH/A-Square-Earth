@@ -25,7 +25,7 @@ public class ZoomIn : MonoBehaviour
 
     private void Update() { //다트윈 쓹
         
-        if (Input.GetKeyDown(KeyCode.Mouse1)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
 
             isZoom = !isZoom;
 
