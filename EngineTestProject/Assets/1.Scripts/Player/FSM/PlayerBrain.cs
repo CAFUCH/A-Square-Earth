@@ -5,43 +5,39 @@ using UnityEngine.AI;
 
 public class PlayerBrain : MonoBehaviour
 {
-    // 입력을 받고 state들을 검사하면 옳은 state를 실행하는
-
     public NavMeshAgent _agent;
 
     public PlayerState _pState;
 
-    GameObject target;
+    public List<PlayerState> states;
 
-    public PlayerState folowingState, attackState;
+    GameObject target;
+    RaycastHit point;
+
+    private void Awake() {
+        
+        _agent = GetComponent<NavMeshAgent>();
+    }
 
     private void Update() {
         
-        _pState?.TakeAction(target);
+        _pState?.CheckTransition(target, point);
     }
 
-    public void ClickObj(RaycastHit hit) { //obj가 클릭됐을 때 실행
+    public void ClickObj() { //obj가 클릭됐을 때 실행
 
-        // if (Input.GetKeyDown(KeyCode.Mouse1)) {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-            // RaycastHit hit;
+        if (Physics.Raycast(ray, out hit)) {
 
-            // if (Physics.Raycast(ray, out hit)) {
+            target = hit.collider.gameObject;
+            point = hit;
 
-            //     target = hit.collider.gameObject;
-            // }
-        // }
-
-        target = hit.collider.gameObject; //target 저장하고
-
-        _pState = folowingState;
-
-    }
-
-    public void ChangeState(PlayerState nextState) {
-
-        _pState = nextState;
+            foreach (PlayerState s in states)
+                if (s.CheckLayer(target))
+                    _pState = s;
+        }
     }
 }

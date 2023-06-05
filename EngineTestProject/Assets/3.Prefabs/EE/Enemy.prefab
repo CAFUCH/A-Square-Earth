@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6878721638254440663}
   - component: {fileID: 6878721638254440662}
   - component: {fileID: 6878721638254440661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IdleState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6878721639268588925}
   - component: {fileID: 6878721639268588924}
   - component: {fileID: 6878721639268588923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WalkState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,13 +191,13 @@ GameObject:
   - component: {fileID: 6878721639287048115}
   - component: {fileID: 2726547625217837218}
   - component: {fileID: 6878721639287048114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6878721639287046222
 Transform:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6878721639287048116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.963, y: -45.5, z: 81.72161}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 6878721640147394462}
   - component: {fileID: 6878721640147394461}
   - component: {fileID: 6878721640147394460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RunState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

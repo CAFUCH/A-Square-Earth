@@ -18,9 +18,9 @@ public class AIBrain : MonoBehaviour
 
     private void Update() {
         
-        foreach (AIState a in states) { // 리스트를 모두 검사했을 때
+        foreach (AIState s in states) { // 리스트를 모두 검사했을 때
 
-            a.StartTransition(); // 범위 내에 들어왔다면 현재 상태를 변경한다
+            s.StartTransition(); // 범위 내에 들어왔다면 현재 상태를 변경한다
         }
 
         curAIState?.StartAction(); // 현재 상태의 액션을 실행한다
