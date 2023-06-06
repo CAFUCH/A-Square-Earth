@@ -18,6 +18,9 @@ public abstract class Entity : MonoBehaviour
     protected void OnDamage(float hp, float damage) {
 
         hp -= damage;
+
+        if (hp <= 0)
+            OnDie();
     }
 
     protected abstract void OnDie();

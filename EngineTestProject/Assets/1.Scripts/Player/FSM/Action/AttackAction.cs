@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AttackAction : PlayerState
 {
+    Core core;
     public override bool CheckLayer(GameObject target) {
 
         return base.CheckLayer(target);
@@ -18,5 +19,7 @@ public class AttackAction : PlayerState
     protected override void Action(RaycastHit hit) {
 
         Debug.Log("공격 중");
+
+        // Core.instance.OnDamage(_pBrain.);
     }
 }
