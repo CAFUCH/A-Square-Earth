@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour
         hp = maxHp;
     }
 
-    protected void OnDamage(float hp, float damage) {
+    protected void OnDamage(float damage) {
 
         hp -= damage;
 

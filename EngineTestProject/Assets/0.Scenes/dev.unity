@@ -579,6 +579,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8920180544133963517, guid: d11b27fdc78be104fbb298785fe8af43, type: 3}
   m_PrefabInstance: {fileID: 522167277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &539901942 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8920180545058610368, guid: b693900e1e3430344bd8b99f47260dc1, type: 3}
+  m_PrefabInstance: {fileID: 669786605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610230214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1169,7 @@ MonoBehaviour:
   damage: 0
   attactDelay: 0
   timber: {fileID: 7773026812240407697, guid: c8d8209671ea2274e89d6cf437fb0156, type: 3}
+  parent: {fileID: 539901942}
 --- !u!1001 &1073095278
 PrefabInstance:
   m_ObjectHideFlags: 0
