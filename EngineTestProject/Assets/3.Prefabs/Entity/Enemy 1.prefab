@@ -191,8 +191,9 @@ GameObject:
   - component: {fileID: 6878721639287048115}
   - component: {fileID: 2726547625217837218}
   - component: {fileID: 6878721639287048114}
+  - component: {fileID: 7351677045211354799}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Enemy 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +225,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6878721639287048116}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -1176892059518722629, guid: 13aa51088211e694aba250125d3960b7, type: 3}
 --- !u!23 &6878721639287048112
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -339,6 +340,26 @@ MonoBehaviour:
   - {fileID: 6878721639268588925}
   - {fileID: 6878721640147394462}
   target: {fileID: 0}
+--- !u!95 &7351677045211354799
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878721639287048116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 05dd2e86dee1d5943a581855ace37232, type: 3}
+  m_Controller: {fileID: 9100000, guid: 93c481b5a907a1f448affd64f7bfb76d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6878721640147394463
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05dd2e86dee1d5943a581855ace37232, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05dd2e86dee1d5943a581855ace37232, type: 3}
       propertyPath: m_LocalPosition.z
@@ -486,7 +507,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 93c481b5a907a1f448affd64f7bfb76d, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 05dd2e86dee1d5943a581855ace37232, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05dd2e86dee1d5943a581855ace37232, type: 3}
 --- !u!4 &6267209290461561629 stripped
 Transform:
