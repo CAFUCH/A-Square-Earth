@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4029795871676620825, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5258361613795273330, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: m_Enabled
@@ -1088,6 +1088,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25.5, y: 45, z: 0}
+--- !u!1 &1005015321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8920180544593617154, guid: b693900e1e3430344bd8b99f47260dc1, type: 3}
+  m_PrefabInstance: {fileID: 669786605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1005015326
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005015321}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.317, y: 0.33900002, z: 0.31100002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.001, y: 0.33900002, z: -0.002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1021844732
 PrefabInstance:
   m_ObjectHideFlags: 0

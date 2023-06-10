@@ -32,6 +32,7 @@ public class PlayerBrain : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit)) {
 
+            Debug.Log(hit.collider.name);
             target = hit.collider.gameObject;
             point = hit;
 
