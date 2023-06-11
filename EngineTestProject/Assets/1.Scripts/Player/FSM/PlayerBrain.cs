@@ -7,6 +7,7 @@ public class PlayerBrain : MonoBehaviour
 {
     public NavMeshAgent _agent;
 
+    public Player player;
     public PlayerState _pState;
 
     public List<PlayerState> states;
@@ -17,6 +18,7 @@ public class PlayerBrain : MonoBehaviour
     private void Awake() {
         
         _agent = GetComponent<NavMeshAgent>();
+        player = GetComponent<Player>();
     }
 
     private void Update() {

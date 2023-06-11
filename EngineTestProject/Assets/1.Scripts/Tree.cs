@@ -13,7 +13,7 @@ public class Tree : Entity
         if (Input.GetKeyDown(KeyCode.Y)) {
 
             Debug.Log("트리 존나 패는중 " + hp);
-            OnDamage(1f);
+            // OnDamage(1f);
         }
     }
     protected override void OnDie() {

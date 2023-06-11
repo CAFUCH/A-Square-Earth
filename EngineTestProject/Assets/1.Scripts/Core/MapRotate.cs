@@ -31,6 +31,6 @@ public class MapRotate : MonoBehaviour
     private void Rotate(Quaternion rot) {
 
         isSpinning = true;
-        _map.transform.DORotateQuaternion(rot * _map.transform.rotation, 1f).SetEase(Ease.InOutExpo).OnComplete(() => isSpinning = false);
+        _map.transform.DORotateQuaternion(rot * _map.transform.rotation, 0.5f).SetEase(Ease.InOutExpo).OnComplete(() => isSpinning = false);
     }
 }

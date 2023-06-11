@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: StateDist
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1760315676950557003, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
+      propertyPath: StateLayer.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
     - target: {fileID: 3347192425775921618, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: StateLayer.m_Bits
       value: 1
@@ -661,8 +665,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 452227671}
-  leftCount: 0
-  rightCount: 0
 --- !u!114 &610230218
 MonoBehaviour:
   m_ObjectHideFlags: 0
