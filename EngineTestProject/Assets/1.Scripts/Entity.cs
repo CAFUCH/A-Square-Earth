@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour, IDamageable
         
         hp = maxHp;
     }
-    public void Ondamage(float damage) {
+    public virtual void Ondamage(float damage) {
        
         hp -= damage;
 
