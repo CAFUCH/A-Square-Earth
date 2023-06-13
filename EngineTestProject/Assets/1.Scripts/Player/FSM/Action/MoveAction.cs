@@ -17,5 +17,7 @@ public class MoveAction : PlayerState
     protected override void Action(RaycastHit hit) {
 
         _pBrain._agent.SetDestination(hit.point);
+
+        _animator.SetFloat("Move", _pBrain._agent.speed);
     }
 }

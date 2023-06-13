@@ -10,6 +10,8 @@ public class RunAction : AIAction
     }
     public override void TakeAction() {
 
-        aiBrain.SetDestinationF(aiBrain.target.position, 10f);
+        aiBrain.SetDestinationF(aiBrain.target.position, speed);
+
+        _animator.SetFloat("Move", speed);
     }
 }

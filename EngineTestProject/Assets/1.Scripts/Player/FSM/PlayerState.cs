@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class PlayerState : MonoBehaviour
 {
     protected PlayerBrain _pBrain;
+    protected Animator _animator;
 
     [SerializeField] protected LayerMask StateLayer;
     [SerializeField] protected float StateDist;
@@ -15,6 +16,7 @@ public abstract class PlayerState : MonoBehaviour
     private void Awake() {
         
         _pBrain = GetComponentInParent<PlayerBrain>();
+        _animator = GetComponentInParent<Animator>();
     }
 
     public virtual bool CheckLayer(GameObject target) { // 레이어 검사를 통해 알맞은 action 찾기
@@ -25,12 +27,12 @@ public abstract class PlayerState : MonoBehaviour
 
     public virtual void CheckTransition(GameObject target, RaycastHit hit) {
 
-        float distance = Vector3.Distance(transform.position, target.transform.position); // 거리 측정
+        distance = Vector3.Distance(transform.position, target.transform.position); // 거리 측정
 
-        if (distance <= StateDist) // 거리 검사
+        if (distance <= StateDist) // 거리가 된다면 action 실행
             Action(hit);
-        else
-            _pBrain._agent.SetDestination(target.transform.position);
+        else 
+            _pBrain._agent.SetDestination(target.transform.position); // 아니라면 계속 걷는다.
     }
 
     protected abstract void Action(RaycastHit hit);

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public abstract class AIAction : MonoBehaviour
 {
+    protected Animator _animator;
     protected AIBrain aiBrain;
-    // [SerializeField] protected float speed; // 특정 상태의 속도
+    [SerializeField] protected float speed; // 특정 상태의 속도
 
     protected virtual void Awake() {
 
+        _animator = GetComponentInParent<Animator>();
         aiBrain = GetComponentInParent<AIBrain>();
     }
 

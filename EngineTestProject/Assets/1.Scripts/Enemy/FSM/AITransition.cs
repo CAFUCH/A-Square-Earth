@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AITransition : MonoBehaviour
 {
-    // AIBrain aiBrain;
     public AIState nextState;
 
-    [SerializeField] private AIDecision decision;
+    private AIDecision decision;
 
-    // private void Awake() {
+    private void Awake() {
         
-    //     aiBrain = GetComponentInParent<AIBrain>();
-    // }
+        nextState = GetComponent<AIState>();
+        decision = GetComponent<AIDecision>();
+    }
 
     public bool CheckTransition() { // 특정 상태로 변경할 수 있는지 확인하는 함수
 

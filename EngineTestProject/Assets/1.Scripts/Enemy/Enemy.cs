@@ -20,6 +20,8 @@ public class Enemy : Entity
         
         isDie = true;
 
+        _animator.SetTrigger("Die");
+
         Destroy(gameObject);
     }
 }

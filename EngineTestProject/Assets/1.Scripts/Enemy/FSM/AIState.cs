@@ -11,6 +11,8 @@ public class AIState : MonoBehaviour
     private void Awake() {
         
         _aiBrain = GetComponentInParent<AIBrain>();
+        action = GetComponent<AIAction>();
+        transition = GetComponent<AITransition>();
     }
 
     public void StartTransition() {

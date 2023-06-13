@@ -13,17 +13,34 @@ public class DamageCaster : MonoBehaviour
         
         // damage = GetComponent<
     }
-    public void DamageCast() { // 개발중
 
-        // RaycastHit hit;
+    private void Update() {
+        
+        DamageCast();
+    }
+
+    public void DamageCast() {
+
+        RaycastHit hit;
     
-        // bool isHit = Physics.SphereCast(transform.position, castRadius);
+        bool isHit = Physics.SphereCast(transform.position - transform.forward * castRadius,
+            castRadius, transform.forward, out hit, castRadius, objLayer);
 
-        // if (isHit) {
+        if (isHit) {
 
-        //     Debug.Log(hit.collider.name);
-        //     if (hit.collider.TryGetComponent<IDamageable>(out IDamageable target))
-        //         target.Ondamage(damage);
-        // }
+            Debug.Log(hit.collider.name);
+            if (hit.collider.TryGetComponent<IDamageable>(out IDamageable target))
+                target.Ondamage(damage);
+        }
+    }
+
+    private void OnDrawGizmos() { // 눈에 보이게 그려주자!
+
+        if(UnityEditor.Selection.activeObject == gameObject)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, castRadius);
+            Gizmos.color = Color.white;
+        }
     }
 }

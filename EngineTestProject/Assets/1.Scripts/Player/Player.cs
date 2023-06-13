@@ -22,6 +22,8 @@ public class Player : Entity
         
         Debug.Log("게임오버");
 
+        _animator.SetTrigger("Die");
+
         // 다른 entity와 다르게 플레이어가 사망했을 때만 실행되는 것들
     }
 }

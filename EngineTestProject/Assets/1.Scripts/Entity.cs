@@ -5,6 +5,8 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour, IDamageable
 {
+    protected Animator _animator;
+
     [SerializeField] protected float hp, maxHp;
     [SerializeField] protected float walkSpeed, runSpeed;
     [SerializeField] protected float damage;
@@ -12,6 +14,8 @@ public abstract class Entity : MonoBehaviour, IDamageable
 
 
     protected void Awake() {
+
+        _animator = GetComponent<Animator>();
         
         hp = maxHp;
     }

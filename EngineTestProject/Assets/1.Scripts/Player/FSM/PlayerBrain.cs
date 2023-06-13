@@ -1,3 +1,5 @@
+using System.Reflection;
+using System.Net;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +7,9 @@ using UnityEngine.AI;
 
 public class PlayerBrain : MonoBehaviour
 {
-    public NavMeshAgent _agent;
-
     public Player player;
+
+    public NavMeshAgent _agent;
     public PlayerState _pState;
 
     public List<PlayerState> states;
@@ -23,10 +25,16 @@ public class PlayerBrain : MonoBehaviour
 
     private void Update() {
         
-        _pState?.CheckTransition(target, point);
+        _pState?.CheckTransition(target, point); //현재 상태의
+
+        if (Vector3.Distance(transform.position, point.point) < 0.1f) {
+            
+        }
     }
 
     public void ClickObj() { //obj가 클릭됐을 때 실행
+
+        Debug.Log("클릭중");
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 

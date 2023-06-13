@@ -18,10 +18,8 @@ public class AttackAction : PlayerState
     
     protected override void Action(RaycastHit hit) {
 
-        // _pBrain._agent.speed = 0f; // 멈추기
-
-        // hit.collider.gameObject.GetComponent<Tree>().Ondamage(_pBrain.player.damage);
-
         Debug.Log("공격 중");
+
+        _animator.SetTrigger("Attack");
     }
 }

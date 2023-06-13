@@ -12,5 +12,7 @@ public class IdleAction : AIAction
 
         // aiBrain.SetDestinationF(aiBrain.target.position, 0f);
         Debug.Log("에잇 공격");
+
+        _animator.SetFloat("Move", speed);
     }
 }
