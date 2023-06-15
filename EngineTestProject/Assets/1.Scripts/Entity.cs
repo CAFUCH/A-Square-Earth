@@ -21,7 +21,8 @@ public abstract class Entity : MonoBehaviour, IDamageable
     }
     public virtual void Ondamage(float damage) {
        
-        hp -= damage;
+        if (hp > 0)
+            hp -= damage;
 
         if (hp <= 0)
             OnDie();
