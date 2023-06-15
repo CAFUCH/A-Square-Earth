@@ -9,7 +9,9 @@ public abstract class Entity : MonoBehaviour, IDamageable
 
     [SerializeField] protected float hp, maxHp;
     [SerializeField] protected float walkSpeed, runSpeed;
+    public float WalkSpeed { get { return walkSpeed; } }
     [SerializeField] protected float damage;
+    public float Damage { get { return damage; } }
     [SerializeField] protected float attactDelay;
 
 

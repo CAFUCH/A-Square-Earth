@@ -13,11 +13,4 @@ public class Core : MonoBehaviour
         else
             instance = this;
     }
-    public void OnDamage(float hp, float damage) {
-
-        hp -= damage;
-
-        if (hp <= 0)
-            Debug.Log("사망");
-    }
 }

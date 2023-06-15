@@ -8,7 +8,7 @@ public class Player : Entity
         
         if (other.gameObject.CompareTag("Enemy")) {
 
-            Core.instance.OnDamage(hp, damage);
+            // Core.instance.OnDamage(hp, damage);
         }
     }
 

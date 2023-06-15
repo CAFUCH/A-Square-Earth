@@ -26,10 +26,6 @@ public class PlayerBrain : MonoBehaviour
     private void Update() {
         
         _pState?.CheckTransition(target, point); //현재 상태의
-
-        if (Vector3.Distance(transform.position, point.point) < 0.1f) {
-            
-        }
     }
 
     public void ClickObj() { //obj가 클릭됐을 때 실행
@@ -45,6 +41,8 @@ public class PlayerBrain : MonoBehaviour
             Debug.Log(hit.collider.name);
             target = hit.collider.gameObject;
             point = hit;
+
+            _agent.speed = player.WalkSpeed;
 
             foreach (PlayerState s in states)
                 if (s.CheckLayer(target))

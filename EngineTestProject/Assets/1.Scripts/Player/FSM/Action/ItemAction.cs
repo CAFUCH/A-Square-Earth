@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveAction : PlayerState
+public class ItemAction : PlayerState
 {
     public override bool CheckLayer(GameObject target) {
 
@@ -10,18 +10,20 @@ public class MoveAction : PlayerState
     }
 
     public override void CheckTransition(GameObject target, RaycastHit hit) {
-
-        Action(hit);
+        
+        base.CheckTransition(target, hit);
     }
 
     protected override void Action(RaycastHit hit) {
 
+        Debug.Log("줍는 중");
 
-        _pBrain._agent.SetDestination(hit.point);
+        _pBrain._agent.speed = 0;
 
-        if (0.1f > Vector3.Distance(_pBrain.player.transform.position, hit.point))
-            _pBrain._agent.speed = 0;
+        // 애니메이션
+        
+        Destroy(hit.collider.gameObject);
 
-        _animator.SetFloat("Move", _pBrain._agent.speed);
+        _pBrain._pState = null;
     }
 }
