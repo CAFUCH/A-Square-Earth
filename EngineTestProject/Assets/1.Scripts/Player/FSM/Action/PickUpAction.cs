@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemAction : PlayerState
+public class PickUpAction : PlayerState
 {
     public override bool CheckLayer(GameObject target) {
 
@@ -20,8 +20,8 @@ public class ItemAction : PlayerState
 
         _pBrain._agent.speed = 0;
 
-        // 애니메이션
-        
+        //애니메이션 (attack과 같이 damagecaster 사용,,)
+
         Destroy(hit.collider.gameObject);
 
         _pBrain._pState = null;

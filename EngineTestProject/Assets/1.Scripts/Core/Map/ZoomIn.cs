@@ -15,14 +15,6 @@ public class ZoomIn : MonoBehaviour
     bool isZoom = false;
     float dt;
 
-    private void Start() {
-        
-        // Tweener twn = DOTween.To(() => 
-        // minZoom, value => dt = value, maxZoom, 1.5f).SetEase(ease); //문제 있음
-
-        
-    }
-
     private void Update() { //다트윈 쓹
         
         if (Input.GetKeyDown(KeyCode.Space)) {

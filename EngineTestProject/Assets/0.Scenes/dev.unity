@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: StateLayer.m_Bits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3520486042765718037, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
+      propertyPath: m_Name
+      value: PickUpAction
+      objectReference: {fileID: 0}
     - target: {fileID: 3521240673969463830, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: m_Radius
       value: 0.25
@@ -447,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6857703733798188137, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.1
+      value: -44.05
       objectReference: {fileID: 0}
     - target: {fileID: 6857703733798188137, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -738,9 +742,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cam: {fileID: 963194227}
   ease: 15
-  minZoom: 20
+  minZoom: 17.5
   maxZoom: 10
-  minHeight: 1
+  minHeight: 10
   maxHeight: 17.5
 --- !u!4 &610230216
 Transform:
@@ -1241,7 +1245,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 20
+  field of view: 17.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1267,7 +1271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.20389782, y: 0.37324736, z: -0.08445724, w: 0.9010989}
-  m_LocalPosition: {x: -40, y: 7.5, z: -70}
+  m_LocalPosition: {x: -40, y: 10, z: -70}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1726,6 +1730,26 @@ Transform:
   m_Father: {fileID: 452227672}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+--- !u!1 &1587423985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 847936038984234023, guid: cd2d68af906785545869828eabb79d4a, type: 3}
+  m_PrefabInstance: {fileID: 1731926201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1587423992
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587423985}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1612318752
 GameObject:
   m_ObjectHideFlags: 0
