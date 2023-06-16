@@ -26,7 +26,15 @@ public class AttackAction : PlayerState
         _animator.SetTrigger("Attack");
 
         // 데미지 주기,,
+
+        
         if (hit.collider.gameObject.TryGetComponent<IDamageable>(out target))
             target.Ondamage(_pBrain.player.Damage);
+    }
+
+
+    public void Arrow() {
+
+        Debug.Log("화살 뾱");
     }
 }

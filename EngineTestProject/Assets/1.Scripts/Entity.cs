@@ -8,8 +8,8 @@ public abstract class Entity : MonoBehaviour, IDamageable
     protected Animator _animator;
 
     [SerializeField] protected float hp, maxHp;
-    [SerializeField] protected float walkSpeed, runSpeed;
-    public float WalkSpeed { get { return walkSpeed; } }
+    [SerializeField] protected float speed;
+    public float Speed { get { return speed; } }
     [SerializeField] protected float damage;
     public float Damage { get { return damage; } }
     [SerializeField] protected float attactDelay;

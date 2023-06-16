@@ -42,7 +42,7 @@ public class PlayerBrain : MonoBehaviour
             target = hit.collider.gameObject;
             point = hit;
 
-            _agent.speed = player.WalkSpeed;
+            _agent.speed = player.Speed;
 
             foreach (PlayerState s in states)
                 if (s.CheckLayer(target))
