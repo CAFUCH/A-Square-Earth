@@ -23,18 +23,13 @@ public class AttackAction : PlayerState
 
         _pBrain._agent.speed = 0;
 
-        _animator.SetTrigger("Attack");
+        // _animator.SetTrigger("Attack");
+        _animator.SetTrigger("PickUp");
 
         // 데미지 주기,,
-
+        _pBrain._pState = null;
         
         if (hit.collider.gameObject.TryGetComponent<IDamageable>(out target))
             target.Ondamage(_pBrain.player.Damage);
-    }
-
-
-    public void Arrow() {
-
-        Debug.Log("화살 뾱");
     }
 }

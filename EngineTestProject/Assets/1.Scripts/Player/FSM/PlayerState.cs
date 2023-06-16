@@ -7,6 +7,7 @@ public abstract class PlayerState : MonoBehaviour
 {
     protected PlayerBrain _pBrain;
     protected Animator _animator;
+    protected Animation _animation;
 
     [SerializeField] protected LayerMask StateLayer;
     [SerializeField] protected float StateDist;
@@ -17,6 +18,7 @@ public abstract class PlayerState : MonoBehaviour
         
         _pBrain = GetComponentInParent<PlayerBrain>();
         _animator = GetComponentInParent<Animator>();
+        _animation = GetComponentInParent<Animation>();
     }
 
     public virtual bool CheckLayer(GameObject target) { // 레이어 검사를 통해 알맞은 action 찾기

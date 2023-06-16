@@ -3904,6 +3904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6857703733798188137}
   - component: {fileID: 6857703733798188140}
+  - component: {fileID: 3492913541643462734}
   - component: {fileID: 6857703733798188136}
   - component: {fileID: 4029795871676620825}
   - component: {fileID: 8791500834397811545}
@@ -3957,6 +3958,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3492913541643462734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857703733798188143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba1cb75a10f17d4b8ae00779f996aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &6857703733798188136
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4065,8 +4078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 100
-  walkSpeed: 7
-  runSpeed: 10
+  speed: 0
   damage: 3
   attactDelay: 0.75
 --- !u!114 &6607217827090707462
@@ -4081,6 +4093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd6a07af6348a744b4807513489f00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInput: 1
 --- !u!114 &987719554953021866
 MonoBehaviour:
   m_ObjectHideFlags: 0

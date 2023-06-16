@@ -60,10 +60,10 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 1
-        functionName: Arrow
+      - time: 0.9695817
+        functionName: PickUp
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 56543c59189f52b4c9664d9b714d1758, type: 3}
+        objectReferenceParameter: {fileID: 11500000, guid: eba1cb75a10f17d4b8ae00779f996aac, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

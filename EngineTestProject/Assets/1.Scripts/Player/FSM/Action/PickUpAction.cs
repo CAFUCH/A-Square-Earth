@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class PickUpAction : PlayerState
 {
-    RaycastHit hit;
-    public override bool CheckLayer(GameObject target) {
+        public override bool CheckLayer(GameObject target) {
 
         return base.CheckLayer(target);
     }
@@ -18,21 +17,15 @@ public class PickUpAction : PlayerState
 
     protected override void Action(RaycastHit hit) {
 
-        this.hit = hit;
-
         Debug.Log("줍는 중");
 
         _pBrain._agent.speed = 0;
 
         // 애니메이션 (attack과 같이 damagecaster 사용,,)x`S
+        _animation.hit = hit;
         _animator.SetTrigger("PickUp");
-        
-    }
-
-    public void PickUp() {
-
-        Destroy(hit.collider.gameObject);
 
         _pBrain._pState = null;
+        
     }
 }
