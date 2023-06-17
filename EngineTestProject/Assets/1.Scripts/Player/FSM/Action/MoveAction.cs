@@ -11,11 +11,13 @@ public class MoveAction : PlayerState
 
     public override void CheckTransition(GameObject target, RaycastHit hit) {
 
+        base.CheckTransition(target, hit);
         Action(hit);
     }
 
     protected override void Action(RaycastHit hit) {
 
+        // Debug.Log("도착");
 
         _pBrain._agent.SetDestination(hit.point);
 

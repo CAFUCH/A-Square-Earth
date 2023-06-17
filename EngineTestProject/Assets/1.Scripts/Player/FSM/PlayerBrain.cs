@@ -14,6 +14,8 @@ public class PlayerBrain : MonoBehaviour
 
     public List<PlayerState> states;
 
+    // [SerializeField] private LayerMask layer;
+
     GameObject target;
     RaycastHit point;
 
@@ -28,17 +30,15 @@ public class PlayerBrain : MonoBehaviour
         _pState?.CheckTransition(target, point); //현재 상태의
     }
 
-    public void ClickObj() { //obj가 클릭됐을 때 실행
+    public void ClickObj(RaycastHit hit) { //obj가 클릭됐을 때 실행
 
-        Debug.Log("클릭중");
+        // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // RaycastHit hit;
 
-        RaycastHit hit;
+        // if (Physics.Raycast(ray, out hit, layer)) {
 
-        if (Physics.Raycast(ray, out hit)) {
-
-            Debug.Log(hit.collider.name);
+            Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
             target = hit.collider.gameObject;
             point = hit;
 
@@ -47,6 +47,6 @@ public class PlayerBrain : MonoBehaviour
             foreach (PlayerState s in states)
                 if (s.CheckLayer(target))
                     _pState = s;
-        }
+        // }
     }
 }

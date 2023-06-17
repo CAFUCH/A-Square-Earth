@@ -17,13 +17,13 @@ public class MapRotate : MonoBehaviour
         rightRot = rot = Quaternion.Euler(90f, 0, 0);
     }
 
-    private void Update() {
+    public void ClickMap(string _name) {
         
         if (!isSpinning) {
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (_name == "L")
                 Rotate(leftRot);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (_name == "R")
                 Rotate(rightRot);
         }
     }

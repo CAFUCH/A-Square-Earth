@@ -31,10 +31,17 @@ public abstract class PlayerState : MonoBehaviour
 
         distance = Vector3.Distance(transform.position, target.transform.position); // 거리 측정
 
-        if (distance <= StateDist) // 거리가 된다면 action 실행
+        if (distance <= StateDist) {// 거리가 된다면 action 실행
+
             Action(hit);
-        else 
+            _pBrain._agent.speed = 0;
+            _animator.SetFloat("Move", _pBrain._agent.speed);
+        }
+        else {
+
             _pBrain._agent.SetDestination(target.transform.position); // 아니라면 계속 걷는다.
+            _animator.SetFloat("Move", _pBrain._agent.speed);
+        }
     }
 
     protected abstract void Action(RaycastHit hit);
