@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ public class AttackAction : PlayerState
 {
     Core core;
     IDamageable target;
+
+    Vector3 dir;
 
     public override bool CheckLayer(GameObject target) {
 
@@ -20,15 +23,10 @@ public class AttackAction : PlayerState
     
     protected override void Action(RaycastHit hit) {
 
-        Debug.Log("공격 중");
+        dir = hit.transform.position - _pBrain.transform.position;
+        _pBrain.transform.rotation = Quaternion.LookRotation(dir);
 
         _animator.SetTrigger("Attack");
-
-        // 데미지 주기,,
-        // if (hit.collider.gameObject.TryGetComponent<IDamageable>(out target))
-        //     target.Ondamage(_pBrain.player.Damage);
-
-        // 화살 발
 
         _pBrain._pState = null;
     }

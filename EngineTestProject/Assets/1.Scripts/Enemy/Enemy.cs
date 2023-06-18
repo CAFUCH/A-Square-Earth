@@ -16,6 +16,11 @@ public class Enemy : Entity
         }
     }
 
+    public override void Ondamage(float damage) {
+
+        base.Ondamage(damage);
+    }
+
     protected override void OnDie() {
         
         isDie = true;

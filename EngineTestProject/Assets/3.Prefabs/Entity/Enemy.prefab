@@ -340,8 +340,7 @@ MonoBehaviour:
   states:
   - {fileID: 8999186492685899552}
   - {fileID: 5414154182888239252}
-  - {fileID: 0}
-  target: {fileID: 6857703733798188137, guid: ad642eef3860db0458e568ff1bbee8e2, type: 3}
+  target: {fileID: 0}
 --- !u!1 &920203393313699166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,7 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6405f4ab401b53647a61c3e8ee954528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2
 --- !u!114 &8994014341796796318
 MonoBehaviour:
   m_ObjectHideFlags: 0

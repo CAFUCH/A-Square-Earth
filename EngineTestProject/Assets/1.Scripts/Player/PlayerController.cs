@@ -35,8 +35,6 @@ public class PlayerController : MonoBehaviour
 
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
 
-        Debug.Log("수행");
-
         return (Physics.Raycast(ray, out hit, layer));
     }
 }
