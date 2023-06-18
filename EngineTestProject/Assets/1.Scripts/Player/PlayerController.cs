@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask layer;
 
     public bool isInput = true;
+    bool isClick = false;
 
     private void Awake() {
         
@@ -19,7 +21,6 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-
 
         if (isInput) {
 
@@ -35,6 +36,17 @@ public class PlayerController : MonoBehaviour
 
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
 
-        return (Physics.Raycast(ray, out hit, layer));
+        isClick = (Physics.Raycast(ray, out hit, layer));
+
+        // StartCoroutine(clickColl());
+
+        return isClick;
+    }
+
+    IEnumerator clickColl() {
+
+        isInput = false;
+        yield return new WaitForSeconds(1f);
+        isInput = true;
     }
 }

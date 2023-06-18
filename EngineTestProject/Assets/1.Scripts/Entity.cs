@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour, IDamageable
     [SerializeField] protected float attactDelay;
 
 
-    protected void Awake() {
+    protected virtual void Awake() {
 
         _animator = GetComponent<Animator>();
         

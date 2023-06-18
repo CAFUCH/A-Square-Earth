@@ -32,21 +32,14 @@ public class PlayerBrain : MonoBehaviour
 
     public void ClickObj(RaycastHit hit) { //obj가 클릭됐을 때 실행
 
-        // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
+        target = hit.collider.gameObject;
+        point = hit;
 
-        // RaycastHit hit;
+        _agent.speed = player.Speed;
 
-        // if (Physics.Raycast(ray, out hit, layer)) {
-
-            Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
-            target = hit.collider.gameObject;
-            point = hit;
-
-            _agent.speed = player.Speed;
-
-            foreach (PlayerState s in states)
-                if (s.CheckLayer(target))
-                    _pState = s;
-        // }
+        foreach (PlayerState s in states)
+            if (s.CheckLayer(target))
+                _pState = s;
     }
 }

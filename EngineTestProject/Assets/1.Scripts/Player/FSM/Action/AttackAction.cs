@@ -22,7 +22,7 @@ public class AttackAction : PlayerState
     }
     
     protected override void Action(RaycastHit hit) {
-
+        
         dir = hit.transform.position - _pBrain.transform.position;
         _pBrain.transform.rotation = Quaternion.LookRotation(dir);
 
