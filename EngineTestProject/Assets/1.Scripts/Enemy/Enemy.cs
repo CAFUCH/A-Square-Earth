@@ -19,6 +19,8 @@ public class Enemy : Entity
     public override void Ondamage(float damage) {
 
         base.Ondamage(damage);
+
+        _animator.SetTrigger("Hit");
     }
 
     protected override void OnDie() {

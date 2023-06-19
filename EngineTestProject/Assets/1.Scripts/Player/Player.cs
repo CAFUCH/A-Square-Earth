@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    private void OnCollisionEnter(Collision other) {
+    // private void OnCollisionEnter(Collision other) {
         
-        if (other.gameObject.CompareTag("Enemy")) {
+    //     if (other.gameObject.CompareTag("Enemy")) {
 
-            // Core.instance.OnDamage(hp, damage);
-        }
-    }
+    //         // Core.instance.OnDamage(hp, damage);
+    //     }
+    // }
 
     public override void Ondamage(float damage)
     {

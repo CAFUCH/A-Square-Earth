@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    PlayerBrain _pBrain;
+    public PlayerBrain _pBrain;
     MapRotate _mapRotate;
 
     Ray ray;
-    RaycastHit hit;
+    public RaycastHit hit;
     [SerializeField] private LayerMask layer;
 
     public bool isInput = true;
@@ -34,9 +34,11 @@ public class PlayerController : MonoBehaviour
 
     private bool rayHit() {
 
+
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
 
         isClick = (Physics.Raycast(ray, out hit, layer));
+        Debug.Log(hit.collider.name);
 
         // StartCoroutine(clickColl());
 

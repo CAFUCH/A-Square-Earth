@@ -7790,6 +7790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestCloud (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f47b15140d3dc6d4cafa042d753ddf65, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47b15140d3dc6d4cafa042d753ddf65, type: 3}
 --- !u!1001 &674451999

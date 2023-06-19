@@ -26,13 +26,10 @@ public class Animal : Entity
 
     protected override void OnDie() {
 
-        // 고기생성
-        item = Instantiate(meat, transform.position, Quaternion.identity, parent.transform);
-        dir = new Vector3(transform.position.x, 0.05f, transform.position.x);
-        item.transform.position = dir;
-
         _animator.SetTrigger("Die");
 
         Destroy(this.gameObject);
+
+        Core.instance.AddItem(meat, this.gameObject);
     }
 }

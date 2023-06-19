@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8936570940540380512}
   m_Layer: 8
   m_Name: timber
-  m_TagString: Untagged
+  m_TagString: Timber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 5175980538078015287}
   m_Layer: 8
   m_Name: timber
-  m_TagString: Untagged
+  m_TagString: Timber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 5043685069794560838}
   m_Layer: 8
   m_Name: timber
-  m_TagString: Untagged
+  m_TagString: Timber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,9 +303,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134681008453729998}
+  - component: {fileID: 8627468320849697591}
   m_Layer: 8
   m_Name: Timbers
-  m_TagString: Untagged
+  m_TagString: Timber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 7134681008453729999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7134681006541890744}
@@ -328,3 +329,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &8627468320849697591
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134681008453729999}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.63, y: 0.25, z: 0.38}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.25, z: -0.28}
+  m_TimeToStationary: 0.5
