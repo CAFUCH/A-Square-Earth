@@ -7,14 +7,12 @@ using UnityEngine.AI;
 
 public class PlayerBrain : MonoBehaviour
 {
-    public Player player;
+    public Player _player;
 
     public NavMeshAgent _agent;
     public PlayerState _pState;
 
     public List<PlayerState> states;
-
-    // [SerializeField] private LayerMask layer;
 
     GameObject target;
     RaycastHit point;
@@ -22,7 +20,7 @@ public class PlayerBrain : MonoBehaviour
     private void Awake() {
         
         _agent = GetComponent<NavMeshAgent>();
-        player = GetComponent<Player>();
+        _player = GetComponent<Player>();
     }
 
     private void Update() {
@@ -32,11 +30,11 @@ public class PlayerBrain : MonoBehaviour
 
     public void ClickObj(RaycastHit hit) { //obj가 클릭됐을 때 실행
 
-        Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
+            Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
         target = hit.collider.gameObject;
         point = hit;
 
-        _agent.speed = player.Speed;
+        _agent.speed = _player.Speed;
 
         foreach (PlayerState s in states)
             if (s.CheckLayer(target))

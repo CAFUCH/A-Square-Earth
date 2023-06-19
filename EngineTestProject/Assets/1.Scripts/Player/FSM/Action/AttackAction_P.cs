@@ -10,6 +10,7 @@ public class AttackAction_P : PlayerState
     IDamageable target;
 
     Vector3 dir;
+    bool canAttack = true;
 
     public override bool CheckLayer(GameObject target) {
 
@@ -23,12 +24,22 @@ public class AttackAction_P : PlayerState
     
     protected override void Action(RaycastHit hit) {
         
-        dir = hit.transform.position - _pBrain.transform.position;
-        _pBrain.transform.rotation = Quaternion.LookRotation(dir);
+        if (canAttack) {
 
-        _animation.hit = hit;
-        _animator.SetTrigger("Attack");
+            dir = hit.transform.position - _pBrain.transform.position;
+            _pBrain.transform.rotation = Quaternion.LookRotation(dir);
 
-        _pBrain._pState = null;
+            _animation.hit = hit.collider.gameObject;
+            _animator.SetTrigger("Attack");
+
+            _pBrain._pState = null;
+        }
+    }
+
+    IEnumerator delay() {
+
+        canAttack = false;
+        yield return new WaitForSeconds(_pBrain._player.AttackDelay);
+        canAttack = true;
     }
 }

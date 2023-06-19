@@ -19,7 +19,7 @@ public class PickUpAction_P : PlayerState
 
         _pBrain._agent.speed = 0;
 
-        _animation.hit = hit;
+        _animation.hit = hit.collider.gameObject;
         _animator.SetTrigger("PickUp");
 
         _pBrain._pState = null;

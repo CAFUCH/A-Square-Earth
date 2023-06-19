@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class AIBrain : MonoBehaviour
 {
     public NavMeshAgent _agent;
+    public Enemy _enemy;
 
     [SerializeField] private AIState _eState; // 현재 상태를 받을 변수
     [SerializeField] private List<AIState> states; // 변경 가능한 상태 리스트
@@ -14,6 +15,7 @@ public class AIBrain : MonoBehaviour
     private void Awake() {
         
         _agent = GetComponent<NavMeshAgent>();
+        _enemy = GetComponent<Enemy>();
         target = GameObject.Find("Player").GetComponent<Transform>();
     }
 

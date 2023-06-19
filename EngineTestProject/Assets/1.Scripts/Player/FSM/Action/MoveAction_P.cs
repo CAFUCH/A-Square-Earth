@@ -21,7 +21,7 @@ public class MoveAction_P : PlayerState
 
         _pBrain._agent.SetDestination(hit.point);
 
-        if (0.1f > Vector3.Distance(_pBrain.player.transform.position, hit.point))
+        if (0.1f > Vector3.Distance(_pBrain._player.transform.position, hit.point))
             _pBrain._agent.speed = 0;
 
         _animator.SetFloat("Move", _pBrain._agent.speed);

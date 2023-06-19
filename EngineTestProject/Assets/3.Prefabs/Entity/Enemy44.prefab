@@ -911,6 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba1cb75a10f17d4b8ae00779f996aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: {fileID: 0}
   attackPos_P: {fileID: 0}
   attackPos_E: {fileID: 4053564571033624359}
   arrow: {fileID: 0}
@@ -968,7 +969,7 @@ MonoBehaviour:
   maxHp: 15
   speed: 3
   damage: 5
-  attactDelay: 0
+  attactDelay: 1
 --- !u!114 &1515867646317376099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 0}
+  _enemy: {fileID: 0}
   _eState: {fileID: 0}
   states:
   - {fileID: 5429024361469123142}
@@ -1434,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df1fc68d616ba947a08d51a5ab9bb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 3
+  distance: 2
 --- !u!1 &5358113372004376413
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,9 @@ using UnityEngine;
 public class Core : MonoBehaviour
 {
     static public Core instance;
+    public GameObject item;
 
     [SerializeField] private GameObject parent;
-    GameObject _item;
 
     private void Awake() {
         
@@ -19,6 +19,6 @@ public class Core : MonoBehaviour
 
     public void AddItem(GameObject item, GameObject pos) {
 
-        Instantiate(item, pos.transform.position, Quaternion.identity, parent.transform);
+        item = Instantiate(item, pos.transform.position, Quaternion.identity, parent.transform);
     }
 }
