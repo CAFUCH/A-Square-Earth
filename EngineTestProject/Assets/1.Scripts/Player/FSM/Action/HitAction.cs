@@ -1,16 +1,9 @@
-using System.Security.Cryptography;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackAction : PlayerState
+public class HitAction : PlayerState
 {
-    Core core;
-    IDamageable target;
-
-    Vector3 dir;
-
     public override bool CheckLayer(GameObject target) {
 
         return base.CheckLayer(target);
@@ -20,15 +13,14 @@ public class AttackAction : PlayerState
 
         base.CheckTransition(target, hit);
     }
-    
-    protected override void Action(RaycastHit hit) {
-        
-        dir = hit.transform.position - _pBrain.transform.position;
-        _pBrain.transform.rotation = Quaternion.LookRotation(dir);
 
-        _animation.hit = hit;
-        _animator.SetTrigger("Attack");
+    protected override void Action(RaycastHit hit) {
+
+        _animator.SetTrigger("Felling");
 
         _pBrain._pState = null;
+
+        if (hit.collider.TryGetComponent<IDamageable>(out IDamageable target))
+            target.Ondamage(1f);
     }
 }

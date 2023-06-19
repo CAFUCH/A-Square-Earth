@@ -1,3 +1,4 @@
+using Microsoft.Win32.SafeHandles;
 using System.Xml.Serialization;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,9 @@ using UnityEngine.AI;
 public class Animal : Entity
 {
     [SerializeField] private GameObject meat;
+    [SerializeField] private GameObject parent;
+    GameObject item;
+    Vector3 dir;
 
     protected override void Awake() {
 
@@ -22,10 +26,13 @@ public class Animal : Entity
 
     protected override void OnDie() {
 
-        Destroy(this.gameObject);
-
         // 고기생성
+        item = Instantiate(meat, transform.position, Quaternion.identity, parent.transform);
+        dir = new Vector3(transform.position.x, 0.05f, transform.position.x);
+        item.transform.position = dir;
+
         _animator.SetTrigger("Die");
-        Instantiate(meat, transform.position, Quaternion.identity);
+
+        Destroy(this.gameObject);
     }
 }

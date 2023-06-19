@@ -237,6 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40437809141018269}
   - component: {fileID: 6228343240750642407}
+  - component: {fileID: 5539451683598301254}
   - component: {fileID: 9152041834881442777}
   - component: {fileID: -3482057111555159010}
   - component: {fileID: 8044464638531341311}
@@ -256,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 847936038984234023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6283414800846518264}
@@ -285,6 +286,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &5539451683598301254
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847936038984234023}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.22576904
+  m_Height: 1.8059438
+  m_Direction: 1
+  m_Center: {x: 0.009226481, y: 0.87475795, z: 0}
 --- !u!195 &9152041834881442777
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -294,7 +309,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 847936038984234023}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.25
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 1000
   avoidancePriority: 50
@@ -303,7 +318,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.8
+  m_Height: 1.69
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -320,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 20
+  maxHp: 15
   speed: 0
   damage: 3
   attactDelay: 1
@@ -336,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f340a486e29d64b935d339a3713a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _agent: {fileID: 0}
   curAIState: {fileID: 0}
   states:
   - {fileID: 8999186492685899552}

@@ -14,6 +14,7 @@ public class AIBrain : MonoBehaviour
     private void Awake() {
         
         _agent = GetComponent<NavMeshAgent>();
+        target = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     private void Update() {
