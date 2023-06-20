@@ -17,6 +17,12 @@ public class Core : MonoBehaviour
             instance = this;
     }
 
+    private void Update() {
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
+
     public void AddItem(GameObject item, GameObject pos) {
 
         item = Instantiate(item, pos.transform.position, Quaternion.identity, parent.transform);

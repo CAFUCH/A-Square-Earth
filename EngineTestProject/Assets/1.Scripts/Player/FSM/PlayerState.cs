@@ -46,13 +46,13 @@ public abstract class PlayerState : MonoBehaviour
 
     protected abstract void Action(RaycastHit hit);
     
-    private void OnDrawGizmos() { // 눈에 보이게 그려주자!
+    // private void OnDrawGizmos() { // 눈에 보이게 그려주자!
 
-        if(UnityEditor.Selection.activeObject == gameObject)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, StateDist);
-            Gizmos.color = Color.white;
-        }
-    }
+    //     if(UnityEditor.Selection.activeObject == gameObject)
+    //     {
+    //         Gizmos.color = Color.red;
+    //         Gizmos.DrawWireSphere(transform.position, StateDist);
+    //         Gizmos.color = Color.white;
+    //     }
+    // }
 }

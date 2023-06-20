@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     private void Start() {
         
         hpSlider.maxValue = player.MaxHp;
-        hpSlider.maxValue = player.MaxEng;
+        engSlider.maxValue = player.MaxEng;
     }
 
     private void Update() {

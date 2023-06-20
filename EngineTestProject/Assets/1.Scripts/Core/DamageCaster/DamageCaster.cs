@@ -34,13 +34,13 @@ public class DamageCaster : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos() { // 눈에 보이게 그려주자!
+    // private void OnDrawGizmos() { // 눈에 보이게 그려주자!
 
-        if(UnityEditor.Selection.activeObject == gameObject)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, castRadius);
-            Gizmos.color = Color.white;
-        }
-    }
+    //     if(UnityEditor.Selection.activeObject == gameObject)
+    //     {
+    //         Gizmos.color = Color.yellow;
+    //         Gizmos.DrawWireSphere(transform.position, castRadius);
+    //         Gizmos.color = Color.white;
+    //     }
+    // }
 }

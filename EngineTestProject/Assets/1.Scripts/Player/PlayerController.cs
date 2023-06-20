@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public PlayerBrain _pBrain;
+    Player _player;
     MapRotate _mapRotate;
 
     Ray ray;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private void Awake() {
         
         _pBrain = GetComponent<PlayerBrain>();
+        _player = GetComponent<Player>();
         _mapRotate = GameObject.Find("GameManager").GetComponent<MapRotate>();
     }
 
@@ -29,6 +31,13 @@ public class PlayerController : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Mouse1))
                 if (rayHit()) _pBrain.ClickObj(hit);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M)) {
+
+            UIManager.instance.meatCnt--;
+            _player.Hp += 3f;
+            _player.Eng += 5f;
         }
     }
 

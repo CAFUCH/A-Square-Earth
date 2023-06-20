@@ -1,4 +1,4 @@
-using System.Runtime.CompilerServices;
+    using System.Runtime.CompilerServices;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,13 +46,13 @@ public class Animation : MonoBehaviour
         hit.GetComponent<IDamageable>().Ondamage(GetComponent<Enemy>().Damage);
     }
 
-    private void OnDrawGizmosSelected() {
+    // private void OnDrawGizmosSelected() {
         
-        if(UnityEditor.Selection.activeObject == gameObject)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(transform.position, dir);
-            Gizmos.color = Color.white;
-        }
-    }
+    //     if(UnityEditor.Selection.activeObject == gameObject)
+    //     {
+    //         Gizmos.color = Color.red;
+    //         Gizmos.DrawRay(transform.position, dir);
+    //         Gizmos.color = Color.white;
+    //     }
+    // }
 }

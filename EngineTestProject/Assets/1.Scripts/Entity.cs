@@ -8,10 +8,10 @@ public abstract class Entity : MonoBehaviour, IDamageable
     protected Animator _animator;
 
     [SerializeField] protected float hp, maxHp;
-    public float Hp { get { return hp; } }
+    public float Hp { get { return hp; } set { hp = value; } }
     public float MaxHp { get { return maxHp; } }
     [SerializeField] protected float eng, maxEng;
-    public float Eng { get { return eng; } }
+    public float Eng { get { return eng; } set { eng = value; } }
     public float MaxEng { get { return maxEng; } }
     [SerializeField] protected float speed;
     public float Speed { get { return speed; } }

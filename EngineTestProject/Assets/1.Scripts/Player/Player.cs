@@ -11,6 +11,15 @@ public class Player : Entity
     //         // Core.instance.OnDamage(hp, damage);
     //     }
     // }
+    private void Update() {
+        
+        if (0 < eng)
+            eng -= Time.deltaTime;
+        else {
+
+            hp -= 5f;
+        }
+    }
 
     public override void Ondamage(float damage)
     {
