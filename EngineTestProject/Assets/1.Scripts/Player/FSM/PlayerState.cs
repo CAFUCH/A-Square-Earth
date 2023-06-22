@@ -23,7 +23,6 @@ public abstract class PlayerState : MonoBehaviour
 
     public virtual bool CheckLayer(GameObject target) { // 레이어 검사를 통해 알맞은 action 찾기
 
-        // Debug.Log(((1 << target.layer & StateLayer) != 0) + " " + this.name);
         return (1 << target.layer & StateLayer) != 0;
     }
 

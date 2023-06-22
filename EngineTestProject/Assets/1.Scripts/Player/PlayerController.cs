@@ -47,17 +47,7 @@ public class PlayerController : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
 
         isClick = (Physics.Raycast(ray, out hit, layer));
-        Debug.Log(hit.collider.name);
-
-        // StartCoroutine(clickColl());
 
         return isClick;
-    }
-
-    IEnumerator clickColl() {
-
-        isInput = false;
-        yield return new WaitForSeconds(1f);
-        isInput = true;
     }
 }

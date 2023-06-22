@@ -28,7 +28,6 @@ public class DamageCaster : MonoBehaviour
 
         if (isHit) {
 
-            Debug.Log(hit.collider.name);
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable target))
                 target.Ondamage(damage);
         }

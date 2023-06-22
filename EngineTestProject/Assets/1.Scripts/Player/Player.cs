@@ -1,9 +1,11 @@
+using Microsoft.Win32.SafeHandles;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : Entity
 {
+    [SerializeField] private GameObject OverP;
     // private void OnCollisionEnter(Collision other) {
         
     //     if (other.gameObject.CompareTag("Enemy")) {
@@ -29,9 +31,9 @@ public class Player : Entity
     }
     protected override void OnDie() {
         
-        Debug.Log("게임오버");
-
         _animator.SetTrigger("Die");
+
+        OverP.SetActive(true);
 
         // 다른 entity와 다르게 플레이어가 사망했을 때만 실행되는 것들
     }

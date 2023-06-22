@@ -30,7 +30,6 @@ public class PlayerBrain : MonoBehaviour
 
     public void ClickObj(RaycastHit hit) { //obj가 클릭됐을 때 실행
 
-            Debug.Log(hit.collider.name + " " + hit.collider.gameObject.GetComponentInParent<Transform>().rotation);
         target = hit.collider.gameObject;
         point = hit;
 

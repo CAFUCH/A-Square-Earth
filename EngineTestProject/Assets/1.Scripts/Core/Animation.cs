@@ -1,4 +1,4 @@
-    using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,6 +27,7 @@ public class Animation : MonoBehaviour
 
         dir = hit.transform.position - Core.instance.item.transform.position;
         Core.instance.item.transform.forward = dir.normalized;
+        // Core.instance.item.transform.rotation = Quaternion.Euler(90f, 0, 0);
     }
 
     public void PickUp() {

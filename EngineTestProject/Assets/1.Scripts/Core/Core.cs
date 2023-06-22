@@ -23,8 +23,8 @@ public class Core : MonoBehaviour
             Application.Quit();
     }
 
-    public void AddItem(GameObject item, GameObject pos) {
+    public void AddItem(GameObject _item, GameObject _pos) {
 
-        item = Instantiate(item, pos.transform.position, Quaternion.identity, parent.transform);
+        item = Instantiate(_item, _pos.transform.position, Quaternion.identity, parent.transform);
     }
 }

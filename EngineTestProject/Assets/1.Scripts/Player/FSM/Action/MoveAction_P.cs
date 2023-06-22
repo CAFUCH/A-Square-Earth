@@ -17,8 +17,6 @@ public class MoveAction_P : PlayerState
 
     protected override void Action(RaycastHit hit) {
 
-        // Debug.Log("도착");
-
         _pBrain._agent.SetDestination(hit.point);
 
         if (0.1f > Vector3.Distance(_pBrain._player.transform.position, hit.point))
